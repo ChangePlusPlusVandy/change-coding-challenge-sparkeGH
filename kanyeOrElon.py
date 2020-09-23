@@ -72,6 +72,7 @@ req = requests.get(timelineURL, headers=timelineHeaders, params=timelineParamete
 kanyeData = req.json()
 
 #Filters out tweets containing URLs (identified by "http") and tags (identified by "@"), then stores them in a dictionary of two lists
+#NOTE: This is somewhat redundant, but allows for differences in number of Tweets pulled from each user's timeline
 elonTweets = []
 kanyeTweets = []
 for i in range(len(elonData)):
